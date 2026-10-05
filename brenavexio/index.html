@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenavexio - Sweater Care Companion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fdf9;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2e9e6b 0%, #3ab87a 50%, #5cc89d 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 3rem;
+        }
+        
+        .nav {
+            background: white;
+            padding: 16px 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2e9e6b;
+            text-decoration: none;
+        }
+        
+        .nav-links a {
+            color: #555;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #2e9e6b;
+        }
+        
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.05rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(46,158,107,0.12);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e8f8ef, #d4f0e1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a1a1a;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f0faf4, #e8f8ef);
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 12px;
+        }
+        
+        .cta-section p {
+            color: #555;
+            margin-bottom: 24px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2e9e6b;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+        
+        .btn:hover {
+            background: #258b5c;
+            transform: scale(1.02);
+        }
+        
+        .footer {
+            background: #1a2e24;
+            color: rgba(255,255,255,0.7);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #5cc89d;
+        }
+        
+        .footer p {
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .nav-links a {
+                margin-left: 14px;
+                font-size: 0.85rem;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-brand">Brenavexio</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="privacy/">Privacy</a>
+                <a href="support/">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-icon">🧶</div>
+        <h1>Brenavexio</h1>
+        <p>Your personal sweater care companion. Track, maintain, and learn the best practices for your knitwear collection.</p>
+    </section>
+
+    <section class="section" id="features">
+        <h2>Features</h2>
+        <p class="section-subtitle">Everything you need to keep your knitwear in perfect condition</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Collection Manager</h3>
+                <p>Organize your entire sweater collection with detailed material, color, and condition tracking for each piece.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🫧</div>
+                <h3>Care Logging</h3>
+                <p>Record every wash, repair, and maintenance session. Track condition changes over time with visual progress.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Smart Reminders</h3>
+                <p>Set custom care frequencies for each garment. Never miss a cleaning or maintenance schedule again.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Learning Hub</h3>
+                <p>Access expert guides on washing techniques, drying methods, storage tips, and repair instructions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Care Statistics</h3>
+                <p>Visualize your care habits with charts and analytics. See patterns and improve your maintenance routine.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Offline & Private</h3>
+                <p>All data stored locally on your device. No accounts, no cloud, no tracking. Your collection stays private.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="cta-section">
+            <h2>Start Caring for Your Knitwear</h2>
+            <p>Download Brenavexio and give your sweaters the attention they deserve.</p>
+            <a href="#" class="btn">Download on App Store</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy/">Privacy Policy</a>
+            <a href="support/">Technical Support</a>
+            <a href="mailto:support@Brenavexio.app">Contact</a>
+        </div>
+        <p>&copy; 2026 Brenavexio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
