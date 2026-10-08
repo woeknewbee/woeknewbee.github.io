@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en" style="--agreement-bar-height: 146px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3f5f7">
+    <meta name="theme-color" content="#f3f5f7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1218" media="(prefers-color-scheme: dark)">
+    <title>NvenJ‑Mini Speaker Studio · Home, Privacy & Support</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --app-background-color: #f3f5f7;
+            --paper: #f3f5f7;
+            --paper-deep: #e9ecef;
+            --card: #ffffff;
+            --card-2: #f8f9fa;
+            --card-3: #eef1f4;
+            --topbar-bg: rgba(243, 245, 247, .86);
+            --dock-fade-1: rgba(243, 245, 247, .74);
+            --dock-fade-2: rgba(243, 245, 247, .97);
+            --grain: rgba(18,22,28,.045);
+            --line: #dde1e7;
+            --line-strong: #c8ced8;
+            --ink: #12161c;
+            --ink-soft: #343b47;
+            --muted: #5a6372;
+            --faint: #868fa0;
+            --accent: #2b74c9;
+            --accent-deep: #2060ad;
+            --accent-bright: #5399ed;
+            --accent-ink: #1a4b85;
+            --accent-soft: rgba(43, 116, 201, .08);
+            --accent-line: rgba(43, 116, 201, .24);
+            --accent-glow: rgba(43, 116, 201, .52);
+            --brand-from: #428be8;
+            --brand-to: #2b74c9;
+            --cta-from: #428be8;
+            --cta-to: #2b74c9;
+            --cta-glow: rgba(43, 116, 201, .58);
+            --display-from: #63a8f5;
+            --display-mid: #428be8;
+            --display-to: #2b74c9;
+            --signal: #1f72d8;
+            --signal-ink: #1758ab;
+            --signal-soft: rgba(31, 114, 216, .11);
+            --signal-line: rgba(31, 114, 216, .28);
+            --warn: #b86b18;
+            --warn-ink: #8c4e0e;
+            --warn-soft: #fff6e9;
+            --warn-line: #f0d4b0;
+            --warn-on-fill: #ffffff;
+            --grain-opacity: .55;
+            --serif: "New York", ui-serif, "Iowan Old Style", "Palatino", Georgia, "Times New Roman", serif;
+            --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+            --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 1px 2px rgba(18,22,28,.05), 0 14px 28px -22px rgba(18,22,28,.30);
+            --shadow-md: 0 2px 6px rgba(18,22,28,.04), 0 30px 60px -34px rgba(18,22,28,.32);
+            --agreement-bar-height: 152px;
+            font-family: var(--sans);
+            color: var(--ink);
+            background-color: var(--paper);
+            background-image:
+                radial-gradient(880px 460px at 88% -14%, rgba(43, 116, 201, .10), transparent 62%),
+                radial-gradient(720px 520px at -8% 106%, rgba(31, 114, 216, .08), transparent 60%),
+                linear-gradient(180deg, #f8f9fb 0%, #f3f5f7 46%, #eef1f4 100%);
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+                --app-background-color: #0e1218;
+                --paper: #0e1218;
+                --paper-deep: #090b10;
+                --card: #171c24;
+                --card-2: #1c222c;
+                --card-3: #232a36;
+                --topbar-bg: rgba(14, 18, 24, .80);
+                --dock-fade-1: rgba(14, 18, 24, .74);
+                --dock-fade-2: rgba(14, 18, 24, .97);
+                --grain: rgba(255,255,255,.045);
+                --line: #272e3a;
+                --line-strong: #3a4352;
+                --ink: #f1f4f8;
+                --ink-soft: #cad2dd;
+                --muted: #97a2b3;
+                --faint: #798494;
+                --accent: #5399ed;
+                --accent-deep: #428be8;
+                --accent-bright: #7bb6ff;
+                --accent-ink: #7bb6ff;
+                --accent-soft: rgba(83, 153, 237, .13);
+                --accent-line: rgba(83, 153, 237, .29);
+                --accent-glow: rgba(0, 0, 0, .80);
+                --brand-from: #63a8f5;
+                --brand-to: #2b74c9;
+                --cta-from: #428be8;
+                --cta-to: #2060ad;
+                --cta-glow: rgba(0, 0, 0, .84);
+                --display-from: #a0ccff;
+                --display-mid: #63a8f5;
+                --display-to: #428be8;
+                --signal: #479aff;
+                --signal-ink: #70b3ff;
+                --signal-soft: rgba(71, 154, 255, .13);
+                --signal-line: rgba(71, 154, 255, .30);
+                --warn: #f2a748;
+                --warn-ink: #f4c282;
+                --warn-soft: rgba(242, 167, 72, .10);
+                --warn-line: rgba(242, 167, 72, .25);
+                --warn-on-fill: #271804;
+                --grain-opacity: .32;
+                --shadow-sm: 0 1px 2px rgba(0,0,0,.50), 0 16px 30px -24px rgba(0,0,0,.88);
+                --shadow-md: 0 2px 6px rgba(0,0,0,.40), 0 34px 64px -36px rgba(0,0,0,.92);
+                background-image:
+                    radial-gradient(880px 460px at 88% -14%, rgba(83,153,237,.16), transparent 62%),
+                    radial-gradient(720px 520px at -8% 106%, rgba(71,154,255,.09), transparent 60%),
+                    linear-gradient(180deg, #131820 0%, #0e1218 46%, #080a0e 100%);
+            }
+        }
+        * { box-sizing: border-box; }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 108px;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-size: 16px;
+            line-height: 1.68;
+            overflow-x: hidden;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: var(--grain-opacity);
+            background-image: radial-gradient(var(--grain) .5px, transparent .5px);
+            background-size: 4px 4px;
+            -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+            mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+        }
+        ::selection { background: var(--accent); color: #fff; }
+        a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+        button { font: inherit; cursor: pointer; }
+        button, a { -webkit-tap-highlight-color: transparent; }
+        :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+        .skip-link {
+            position: fixed;
+            top: 14px;
+            left: 14px;
+            z-index: 60;
+            padding: 11px 20px;
+            border-radius: 999px;
+            background: var(--accent-deep);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 650;
+            text-decoration: none;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-240%);
+            transition: transform .2s ease;
+        }
+        .skip-link:focus { transform: none; }
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            padding-top: env(safe-area-inset-top);
+            background: var(--topbar-bg);
+            border-bottom: 1px solid var(--line);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            backdrop-filter: blur(20px) saturate(180%);
+        }
+        .topbar-inner {
+            max-width: 1240px;
+            margin: auto;
+            padding: 14px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .brand-lockup { display: flex; align-items: center; gap: 12px; min-width: 0; }
+        .brand-mark {
+            display: grid;
+            place-items: center;
+            flex: 0 0 36px;
+            height: 36px;
+            border-radius: 11px;
+            background-image: linear-gradient(150deg, var(--brand-from), var(--brand-to));
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px -12px var(--accent-glow), inset 0 1px 0 rgba(255, 255, 255, .35);
+        }
+        .brand-copy { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+        .brand-name { font-size: 14px; font-weight: 700; letter-spacing: -.01em; overflow-wrap: anywhere; }
+        .brand-sub {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+        .topbar-meta { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border: 1px solid var(--signal-line);
+            border-radius: 999px;
+            background: var(--signal-soft);
+            color: var(--signal-ink);
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: currentColor;
+            box-shadow: 0 0 0 3px var(--signal-soft);
+            animation: status-pulse 2.6s ease-in-out infinite;
+        }
+        @keyframes status-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+        .updated {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: .04em;
+            color: var(--faint);
+            white-space: nowrap;
+        }
+        .scroll-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; overflow: hidden; }
+        .scroll-progress span {
+            display: block;
+            width: 0;
+            height: 100%;
+            border-radius: 0 2px 2px 0;
+            background-image: linear-gradient(90deg, var(--accent-deep), var(--accent-bright));
+        }
+        .page { max-width: 1240px; margin: auto; padding: 0 40px calc(var(--agreement-bar-height) + 56px); }
+        .shell { display: grid; grid-template-columns: 208px minmax(0, 1fr); gap: 60px; align-items: start; }
+        .reading-surface { min-width: 0; }
+        .reading-nav { position: sticky; top: 108px; padding-top: 54px; }
+        .nav-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 16px;
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+        .nav-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+        .reading-nav nav { display: grid; gap: 4px; }
+        .reading-nav a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 9px 12px;
+            border-radius: 10px;
+            color: var(--muted);
+            font-size: 14px;
+            text-decoration: none;
+            transition: background .16s ease, color .16s ease;
+        }
+        .reading-nav a span {
+            display: grid;
+            place-items: center;
+            flex: 0 0 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: var(--card-3);
+            font-family: var(--mono);
+            font-size: 10px;
+            font-variant-numeric: tabular-nums;
+            color: var(--faint);
+            transition: background .16s ease, color .16s ease;
+        }
+        .reading-nav a:hover { background: var(--card-2); color: var(--ink); }
+        .reading-nav a:hover span { color: var(--ink-soft); }
+        .reading-nav a[aria-current="location"] { background: var(--accent-soft); color: var(--accent-ink); font-weight: 650; }
+        .reading-nav a[aria-current="location"] span { background: var(--accent-deep); color: #fff; }
+        .nav-note {
+            margin: 26px 0 0;
+            padding: 16px 18px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            background: var(--card);
+            box-shadow: var(--shadow-sm);
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+        .nav-note strong {
+            display: block;
+            margin-top: 8px;
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--ink);
+        }
+        .hero { padding: 60px 0 46px; border-bottom: 1px solid var(--line); }
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0 0 22px;
+            padding: 7px 15px 7px 12px;
+            border: 1px solid var(--accent-line);
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-ink);
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+        .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 2px; background: var(--accent); }
+        h1 {
+            margin: 0;
+            max-width: 860px;
+            font-family: var(--serif);
+            font-size: clamp(40px, 5.6vw, 68px);
+            font-weight: 600;
+            line-height: 1.05;
+            letter-spacing: -.03em;
+        }
+        h1 span { display: block; color: var(--accent-ink); }
+        @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+            h1 span {
+                background-image: linear-gradient(96deg, var(--display-from) 2%, var(--display-mid) 54%, var(--display-to) 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .intro { max-width: 680px; margin: 24px 0 36px; color: var(--muted); font-size: 16.5px; }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            background: var(--card);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .hero-stats > div { display: flex; flex-direction: column; gap: 6px; padding: 20px 24px; border-left: 1px solid var(--line); }
+        .hero-stats > div:first-child { border-left: 0; }
+        .hero-stats strong {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -.02em;
+            font-variant-numeric: tabular-nums;
+            color: var(--ink);
+        }
+        .hero-stats span {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+        .trust-panel {
+            position: relative;
+            margin: 36px 0 40px;
+            padding: 30px 32px 32px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            background-image: linear-gradient(180deg, var(--card), var(--card-2));
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .trust-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-image: linear-gradient(90deg, var(--accent-deep) 0%, var(--accent-bright) 38%, transparent 100%);
+        }
+        .panel-kicker {
+            margin: 0 0 10px;
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--accent-ink);
+        }
+        .trust-panel h2 { margin: 0 0 24px; font-family: var(--serif); font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
+        .trust-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            background: var(--line);
+            list-style: none;
+            overflow: hidden;
+        }
+        .trust-list li {
+            position: relative;
+            padding: 18px 22px 18px 52px;
+            background: var(--card);
+            color: var(--ink-soft);
+            font-size: 13.5px;
+            line-height: 1.62;
+            overflow-wrap: anywhere;
+        }
+        .trust-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 20px;
+            top: 19px;
+            display: grid;
+            place-items: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 7px;
+            background: var(--signal-soft);
+            color: var(--signal-ink);
+            font-size: 11px;
+            font-weight: 800;
+        }
+        .content { display: grid; gap: 32px; }
+        .document {
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            background: var(--card);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        .document-header {
+            padding: 28px 34px 24px;
+            border-bottom: 1px solid var(--line);
+            background-image: linear-gradient(180deg, var(--card-2), var(--card));
+        }
+        .label {
+            margin: 0 0 10px;
+            font-family: var(--mono);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: var(--faint);
+        }
+        .document h2 { margin: 0; font-family: var(--serif); font-size: clamp(25px, 2.6vw, 32px); font-weight: 600; line-height: 1.18; letter-spacing: -.025em; }
+        .document-body { padding: 8px 34px 36px; }
+        .document-body p { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+        .document-body p + p { margin-top: 14px; }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 30px 0 14px;
+            font-family: var(--mono);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--accent-ink);
+        }
+        .section-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+        .terms { margin: 22px 0 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
+        .terms li {
+            position: relative;
+            display: grid;
+            grid-template-columns: 46px minmax(0, 1fr);
+            gap: 18px;
+            padding: 20px 14px;
+            border-bottom: 1px solid var(--line);
+            transition: background .18s ease;
+        }
+        .terms li::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            top: 14px;
+            bottom: 14px;
+            width: 2px;
+            border-radius: 2px;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity .18s ease;
+        }
+        .terms li:hover { background: var(--card-2); }
+        .terms li:hover::before { opacity: 1; }
+        .terms li:last-child { border-bottom: 0; }
+        .number {
+            display: grid;
+            place-items: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 11px;
+            background: var(--accent-soft);
+            color: var(--accent-ink);
+            font-family: var(--mono);
+            font-size: 11.5px;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+        .terms strong { display: block; margin-bottom: 7px; font-size: 15.5px; font-weight: 650; letter-spacing: -.005em; color: var(--ink); }
+        .terms div > span { display: block; color: var(--muted); font-size: 14.5px; overflow-wrap: anywhere; }
+        .notice {
+            display: flex;
+            gap: 16px;
+            margin: 24px 0 10px;
+            padding: 22px 26px;
+            border: 1px solid var(--warn-line);
+            border-radius: var(--radius-md);
+            background: var(--warn-soft);
+        }
+        .notice-icon {
+            display: grid;
+            place-items: center;
+            flex: 0 0 26px;
+            width: 26px;
+            height: 26px;
+            border-radius: 9px;
+            background: var(--warn);
+            color: var(--warn-on-fill);
+            font-family: var(--mono);
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .notice strong { display: block; margin-bottom: 7px; color: var(--warn-ink); font-size: 15px; line-height: 1.5; }
+        .notice p { color: var(--warn-ink); font-size: 14.5px; opacity: .9; }
+        .disclaimer-list {
+            counter-reset: clause;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1px;
+            margin: 22px 0 0;
+            padding: 0;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            background: var(--line);
+            list-style: none;
+            overflow: hidden;
+        }
+        .disclaimer-list li {
+            position: relative;
+            counter-increment: clause;
+            padding: 20px 24px 20px 60px;
+            background: var(--card-2);
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.65;
+            overflow-wrap: anywhere;
+        }
+        .disclaimer-list li::before {
+            content: counter(clause, decimal-leading-zero);
+            position: absolute;
+            left: 22px;
+            top: 21px;
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--accent-ink);
+            opacity: .8;
+        }
+        .agreement-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 28px max(32px, env(safe-area-inset-right)) calc(20px + env(safe-area-inset-bottom)) max(32px, env(safe-area-inset-left));
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--dock-fade-1) 42%, var(--dock-fade-2) 100%);
+            -webkit-backdrop-filter: blur(16px) saturate(160%);
+            backdrop-filter: blur(16px) saturate(160%);
+        }
+        .agreement-inner {
+            max-width: 1160px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            padding: 16px 20px;
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            background: var(--card);
+            box-shadow: var(--shadow-md);
+        }
+        .agreement-copy { max-width: 470px; }
+        .agreement-copy strong { display: block; font-size: 13.5px; font-weight: 650; }
+        .agreement-copy > span { display: block; margin-top: 4px; color: var(--faint); font-size: 12px; line-height: 1.55; }
+        .action-buttons { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+        .privacy-button, .agree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 12px 18px;
+            border-radius: 999px;
+            font-size: 13.5px;
+            font-weight: 620;
+            transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease, box-shadow .16s ease;
+        }
+        .privacy-button { border: 1px solid var(--line-strong); background: var(--card-2); color: var(--ink-soft); }
+        .privacy-button span { margin-right: 8px; color: var(--faint); }
+        .privacy-button:hover { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent-ink); }
+        .privacy-button:hover span { color: var(--accent-ink); }
+        .agree-button {
+            padding-inline: 26px;
+            border: 0;
+            background-image: linear-gradient(180deg, var(--cta-from), var(--cta-to));
+            color: #fff;
+            box-shadow: 0 16px 32px -16px var(--cta-glow), inset 0 1px 0 rgba(255, 255, 255, .3);
+        }
+        .agree-button span { margin-right: 9px; }
+        .agree-button:hover { transform: translateY(-1px); box-shadow: 0 20px 38px -16px var(--cta-glow), inset 0 1px 0 rgba(255, 255, 255, .34); }
+        .agree-button:active { transform: translateY(0); }
+        @media (max-width: 1000px) {
+            .page { padding-inline: 28px; }
+            .topbar-inner { padding-inline: 28px; }
+            .agreement-bar { padding-inline: max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-left)); }
+            .shell { grid-template-columns: 176px minmax(0, 1fr); gap: 34px; }
+            .agreement-copy { max-width: 260px; }
+            .agreement-copy > span { display: none; }
+            .trust-list { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 720px) {
+            html { scroll-padding-top: 88px; }
+            .topbar-inner { padding: 12px 20px; gap: 12px; }
+            .brand-mark { flex-basis: 32px; height: 32px; border-radius: 10px; font-size: 17px; }
+            .brand-name { font-size: 13px; }
+            .brand-sub { font-size: 8.5px; letter-spacing: .16em; }
+            .updated { display: none; }
+            .status-pill { padding: 6px 11px; font-size: 9px; letter-spacing: .1em; }
+            .page { padding-inline: 20px; }
+            .shell { display: block; }
+            .reading-nav { position: static; padding-top: 22px; }
+            .reading-nav nav { display: flex; gap: 8px; flex-wrap: wrap; }
+            .reading-nav a { gap: 9px; padding: 7px 13px 7px 7px; border: 1px solid var(--line); background: var(--card); font-size: 12.5px; }
+            .reading-nav a span { flex: 0 0 24px; height: 24px; font-size: 9.5px; }
+            .reading-nav a[aria-current="location"] { border-color: var(--accent-line); }
+            .nav-label, .nav-note { display: none; }
+            .hero { padding: 34px 0 30px; }
+            .eyebrow { margin-bottom: 16px; padding: 6px 12px 6px 10px; font-size: 9px; letter-spacing: .1em; }
+            h1 { font-size: clamp(33px, 8.6vw, 46px); }
+            .intro { margin: 20px 0 26px; font-size: 15.5px; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .hero-stats > div { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 12px; padding: 15px 20px; border-left: 0; border-top: 1px solid var(--line); }
+            .hero-stats > div:first-child { border-top: 0; }
+            .hero-stats strong { font-size: 22px; }
+            .trust-panel { margin: 26px 0 30px; padding: 24px 22px 26px; }
+            .trust-panel h2 { font-size: 23px; margin-bottom: 20px; }
+            .trust-list li { padding: 16px 18px 16px 46px; font-size: 13px; }
+            .trust-list li::before { left: 16px; top: 17px; }
+            .content { gap: 24px; }
+            .document-header { padding: 22px 22px 18px; }
+            .document-body { padding: 6px 22px 28px; }
+            .terms li { grid-template-columns: 38px minmax(0, 1fr); gap: 14px; padding: 18px 8px; }
+            .number { width: 30px; height: 30px; border-radius: 9px; font-size: 10.5px; }
+            .notice { padding: 18px; gap: 12px; }
+            .disclaimer-list { grid-template-columns: 1fr; }
+            .disclaimer-list li { padding: 17px 20px 17px 52px; }
+            .disclaimer-list li::before { left: 19px; top: 18px; }
+            .agreement-bar { padding: 22px max(16px, env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+            .agreement-inner { max-width: none; display: block; padding: 14px; }
+            .agreement-copy { max-width: none; margin-bottom: 12px; text-align: center; }
+            .agreement-copy strong { font-size: 12px; }
+            .action-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+            .privacy-button { min-height: 44px; padding: 8px; font-size: 12.5px; }
+            .agree-button { grid-column: 1 / -1; min-height: 48px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
+        @media print {
+            :root {
+                color-scheme: light;
+                --app-background-color: #ffffff;
+                --paper: #ffffff;
+                --card: #ffffff;
+                --card-2: #ffffff;
+                --card-3: #f4f5f8;
+                --topbar-bg: #ffffff;
+                --dock-fade-1: #ffffff;
+                --dock-fade-2: #ffffff;
+                --line: #d5d9e0;
+                --line-strong: #b6bdca;
+                --ink: #10151f;
+                --ink-soft: #2c3444;
+                --muted: #39445a;
+                --faint: #5a6579;
+                --accent: #1a57a1;
+                --accent-deep: #1a57a1;
+                --accent-bright: #2b74c9;
+                --accent-ink: #164782;
+                --accent-soft: #e7f0fb;
+                --accent-line: #b6d3f2;
+                --signal: #1758ab;
+                --signal-ink: #1758ab;
+                --signal-soft: #e8f1fc;
+                --warn: #a1751d;
+                --warn-ink: #6b4e12;
+                --warn-soft: #fffaf0;
+                --warn-line: #e0c88b;
+                --warn-on-fill: #ffffff;
+                background-color: #fff;
+                background-image: none;
+            }
+            body::after { display: none; }
+            .topbar, .agreement-bar, .skip-link, .reading-nav { display: none; }
+            .page { max-width: none; padding: 0; }
+            .shell { display: block; }
+            .hero { padding: 0 0 18px; border-bottom: 1px solid var(--line); }
+            h1 span { background: none; -webkit-text-fill-color: currentColor; color: var(--ink); }
+            .document, .trust-panel, .hero-stats, .nav-note, .agreement-inner { box-shadow: none; }
+            .trust-panel::before { background: var(--accent-deep); }
+            .document-header { break-after: avoid; }
+            .terms li, .disclaimer-list li, .trust-list li { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="legal-page">
+    <a class="skip-link" href="#features">Skip to content</a>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand-lockup" aria-label="NvenJ">
+                <span class="brand-mark" aria-hidden="true">N</span>
+                <span class="brand-copy">
+                    <span class="brand-name">NvenJ</span>
+                    <span class="brand-sub"> Mini Speaker Studio</span>
+                </span>
+            </div>
+            <div class="topbar-meta">
+                <span class="status-pill">
+                    <span class="status-dot" aria-hidden="true"></span>Local‑First App
+                </span>
+                <span class="updated">Copyright © 2026‑08‑02</span>
+            </div>
+        </div>
+        <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress" style="width:0%"></span></div>
+    </header>
+    <main class="page">
+        <div class="shell">
+            <aside class="reading-nav" aria-label="Document navigation">
+                <p class="nav-label">On this page</p>
+                <nav>
+                    <a href="#overview" aria-current="location"><span>01</span>Overview & Features</a>
+                    <a href="#privacy"><span>02</span>Privacy Policy</a>
+                    <a href="#support"><span>03</span>Technical Support & FAQ</a>
+                </nav>
+                <p class="nav-note">Last updated<strong>August 02, 2026</strong></p>
+            </aside>
+            <div class="reading-surface">
+                <section class="hero" id="overview" aria-labelledby="page‑title">
+                    <p class="eyebrow">Mini speaker enthusiast logbook</p>
+                    <h1 id="page‑title">NvenJ<span>Mini Speaker Studio</span></h1>
+                    <p class="intro">
+                    Review these terms before using NvenJ.
+                    </p>
+                    <p class="intro">
+I personally use quite a few mini speakers—some on shelves, others in drawers—but tracking repair records and details of speakers I’ve given away across scattered notes and chat logs was a hassle. I created "Mini Speaker Studio" to consolidate all this information into a single, offline logbook; you can simply open it and start recording—no accounts or cloud syncing required.
+                    </p>
+                    <div class="hero-stats" aria-label="Service highlights">
+                        <div>
+                            <strong>Local</strong>
+                            <span>On‑device storage</span>
+                        </div>
+                        <div>
+                            <strong>0</strong>
+                            <span>User accounts required</span>
+                        </div>
+                        <div>
+                            <strong>iOS14+</strong>
+                            <span>iPhone / iPad</span>
+                        </div>
+                    </div>
+                </section>
+                <aside class="trust-panel" aria-label="Quick summary">
+                    <p class="panel-kicker">At a glance</p>
+                    <h2>Core App Summary</h2>
+                    <ul class="trust-list">
+                        <li>Maintain complete records for your mini‑speaker collection including hardware specs and placement location.</li>
+                        <li>Log repair tickets, fault descriptions, replaced parts, labor hours and resolution status for each unit.</li>
+                        <li>Store gift‑transaction records: recipient info, packaging details, tracking numbers and personal notes.</li>
+                        <li>All data remains strictly on your device, no cloud, no accounts, never transmitted to outside servers.</li>
+                    </ul>
+                </aside>
+                <section class="content" aria-label="Documents">
+                    <article class="document" id="features" aria-labelledby="features‑title">
+                        <header class="document-header">
+                            <p class="label">App Features</p>
+                            <h2 id="features‑title">Feature List</h2>
+                        </header>
+                        <div class="document-body">
+                            <h3 class="section-title">Main Capabilities</h3>
+                            <ul class="terms">
+                                <li>
+                                    <span class="number">01</span>
+                                    <div>
+                                        <strong>Speaker Inventory</strong>
+                                        <span>Record speaker model, driver size, battery specs, supported codecs, and physical placement location for each mini‑speaker in your collection.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">02</span>
+                                    <div>
+                                        <strong>Repair Ticket Logging</strong>
+                                        <span>Track repair ticket numbers, fault descriptions, parts used, labor hours invested, and final resolution status for every repair job.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">03</span>
+                                    <div>
+                                        <strong>Gift & Hand‑off Records</strong>
+                                        <span>Document speakers given away as gifts: recipient, packaging info, shipping tracking numbers and additional personal notes.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">04</span>
+                                    <div>
+                                        <strong>Five Main App Sections</strong>
+                                        <span>Organized navigation: Home, Speakers, Repairs, Statistics, and Settings for streamlined workflow.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">05</span>
+                                    <div>
+                                        <strong>Real‑Data Statistics</strong>
+                                        <span>Generate charts and analytics built entirely from your own logged data, no placeholder demo charts.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">06</span>
+                                    <div>
+                                        <strong>Practical Built‑in Tools</strong>
+                                        <span>Battery life estimator and listening distance guide, useful for arranging speakers on desks or shelves.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">07</span>
+                                    <div>
+                                        <strong>Offline &amp; Private</strong>
+                                        <span>All data stored locally on your device. No accounts, no cloud sync, no telemetry tracking. Designed for hardware enthusiasts.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="document" id="privacy" aria-labelledby="privacy‑title">
+                        <header class="document-header">
+                            <p class="label">Privacy Policy</p>
+                            <h2 id="privacy‑title">Privacy Policy</h2>
+                        </header>
+                        <div class="document-body">
+                            <div class="notice" role="note">
+                                <span class="notice-icon">ℹ</span>
+                                <div>
+                                    <strong>Privacy‑by‑design principle</strong>
+                                    <p>NvenJ is designed with privacy at its core. All your speaker inventory, repair logs and gift‑hand‑off data stays strictly local on your device and never leaves it.</p>
+                                </div>
+                            </div>
+                            <h3 class="section-title">Information We Collect</h3>
+                            <p>NvenJ does not collect, transmit, or store any personal information on external servers. The application operates entirely offline and all data remains on your device.</p>
+                            <ul class="disclaimer-list">
+                                <li>We do not collect personal identification information</li>
+                                <li>We do not collect usage analytics or behavioral data</li>
+                                <li>We do not collect location data</li>
+                                <li>We do not use cookies or tracking technologies</li>
+                                <li>We do not collect device identifiers</li>
+                            </ul>
+                            <h3 class="section-title">Data Storage</h3>
+                            <p>All information you enter into NvenJ (speaker inventory entries, repair tickets, gift records, tool calculations and preferences) is stored exclusively on your device using local storage mechanisms. This data is not accessible to us or any third parties.</p>
+                            <h3 class="section-title">Data Sharing</h3>
+                            <p>Since we do not collect any data, there is no data to share with third parties. NvenJ does not integrate with any third‑party analytics services, advertising networks, or data brokers. This is not a social network or shopping platform.</p>
+                            <h3 class="section-title">Third‑Party Services</h3>
+                            <p>NvenJ does not integrate with any third‑party services that collect user data. The application functions entirely without an internet connection.</p>
+                            <h3 class="section-title">Data Deletion</h3>
+                            <p>You can delete all your data at any time through the Settings section of the application. Alternatively, uninstalling the application will permanently remove all stored data from your device.</p>
+                            <h3 class="section-title">Children's Privacy</h3>
+                            <p>NvenJ does not knowingly collect information from children under 13 years of age. The application is suitable for users of all ages as it does not collect any personal information.</p>
+                            <h3 class="section-title">Security</h3>
+                            <p>Your data is protected by your device's built‑in security measures, including device encryption and biometric/passcode locks. Since data never leaves your device, there is no risk of server‑side data breaches.</p>
+                            <h3 class="section-title">Changes to This Policy</h3>
+                            <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+                            <h3 class="section-title">Contact Us</h3>
+                            <p>If you have any questions about this privacy policy or the application's data practices, please contact us via email: support@nvenj.app</p>
+                        </div>
+                    </article>
+                    <article class="document" id="support" aria-labelledby="support‑title">
+                        <header class="document-header">
+                            <p class="label">Technical Support</p>
+                            <h2 id="support‑title">Technical Support &amp; FAQ</h2>
+                        </header>
+                        <div class="document-body">
+                            <h3 class="section-title">App Compatibility</h3>
+                            <ul class="terms">
+                                <li>
+                                    <span class="number">01</span>
+                                    <div>
+                                        <strong>iOS 14+</strong>
+                                        <span>Compatible with iPhone and iPad running iOS14 or later.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">02</span>
+                                    <div>
+                                        <strong>Fully Offline</strong>
+                                        <span>No internet required. All data stored on your device.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">03</span>
+                                    <div>
+                                        <strong>Local Storage</strong>
+                                        <span>Data persists between sessions using secure local storage.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="section-title">Frequently Asked Questions</h3>
+                            <ul class="terms">
+                                <li>
+                                    <span class="number">Q1</span>
+                                    <div>
+                                        <strong>How do I add a new mini‑speaker?</strong>
+                                        <span>Navigate to the Speakers tab and tap the "+" button in the top‑right corner. Fill in model, driver size, battery specs, supported codecs, placement location and save your entry.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q2</span>
+                                    <div>
+                                        <strong>How do I log a repair ticket?</strong>
+                                        <span>Open the Repairs tab and tap "+". Select the target speaker, fill out ticket number, fault description, consumed parts, labor hours and resolution state then save your repair log.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q3</span>
+                                    <div>
+                                        <strong>How to record a speaker given as a gift?</strong>
+                                        <span>When editing or creating a speaker entry, fill in gift‑related fields: recipient name, packaging notes, tracking number and additional remarks for your personal reference.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q4</span>
+                                    <div>
+                                        <strong>Where is my data stored?</strong>
+                                        <span>All your speaker inventory, repair tickets and gift records are stored locally on‑device. NvenJ does not use cloud services or internet connections. Everything stays private.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q5</span>
+                                    <div>
+                                        <strong>How do I delete my data?</strong>
+                                        <span>Go to Settings and tap "Clear Data". This will permanently erase all speakers, repair logs, gift entries and tool preferences. Uninstalling the app will also remove all local data.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q6</span>
+                                    <div>
+                                        <strong>Can I recover deleted data?</strong>
+                                        <span>Once data is cleared inside‑app or by uninstalling, records cannot be recovered. Confirm before wiping local storage.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q7</span>
+                                    <div>
+                                        <strong>What are the built‑in helper tools?</strong>
+                                        <span>Battery life estimator helps you project runtime based on battery and usage parameters. Listening distance guide gives practical reference for speaker placement on shelves and desks.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="number">Q8</span>
+                                    <div>
+                                        <strong>The app is running slowly. What should I do?</strong>
+                                        <span>Close and reopen NvenJ. Verify device free storage space and update iOS to the latest supported release. Contact support if issues persist.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="section-title">Quick‑Start Guide</h3>
+                            <p>1. Open the app and navigate to the Speakers tab.<br>
+                            2. Tap "+" to input your first mini‑speaker hardware details.<br>
+                            3. Navigate to Repairs tab to log repair history for units you have worked on.<br>
+                            4. Use built‑in battery estimator and listening distance guide for desk‑shelf arrangement.<br>
+                            5. View generated real‑data charts on Statistics tab.<br>
+                            6. Adjust application behaviour inside Settings.</p>
+                            <h3 class="section-title">Contact Support</h3>
+                            <p>Still need help? Our support team is ready to assist you with any questions or issues: <a href="mailto:support@nvenj.app">support@nvenj.app</a></p>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="agreement-bar" aria-label="Bottom action area">
+        <div class="agreement-inner">
+            <div class="agreement-copy">
+                <strong>I have carefully read and acknowledged the above terms.</strong>
+                <span>All information describes application features and privacy behaviour; no account registration required.</span>
+            </div>
+            <div class="action-buttons">
+                <button class="agree-button" id="btnTop" type="button">
+                    <span aria-hidden="true">✓</span>Agree &amp; Continue
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        
+        function callNative(action, param) {
+          if (
+            window.webkit &&
+            window.webkit.messageHandlers &&
+            window.webkit.messageHandlers.native
+          ) {
+            window.webkit.messageHandlers.native.postMessage({
+              action: action,
+              parameter: param,
+            });
+          } else {
+            console.warn("Native environment not detected:", action, param);
+          }
+        }
+        var darkSchemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var sectionLinks = document.querySelectorAll('.reading-nav a');
+        var readingSections = ['overview','features','privacy','support'].map(function(id){return document.getElementById(id);});
+        var scrollProgress = document.getElementById('scrollProgress');
+        var scrollPending = false;
+        function updateScrollProgress(){
+            if(!scrollProgress) return;
+            var max = document.documentElement.scrollHeight - window.innerHeight;
+            var ratio = max>0 ? window.scrollY/max : 0;
+            ratio = Math.max(0, Math.min(1, ratio));
+            scrollProgress.style.width = (ratio*100).toFixed(2)+'%';
+        }
+        function updateReadingPosition(){
+            var current = readingSections[0].id;
+            readingSections.forEach(function(sec){
+                if(sec.getBoundingClientRect().top <=120) current = sec.id;
+            });
+            sectionLinks.forEach(function(link){
+                if(link.getAttribute('href') === '#'+current){
+                    link.setAttribute('aria-current','location');
+                }else{
+                    link.removeAttribute('aria-current');
+                }
+            });
+            scrollPending = false;
+        }
+        function updateScrollState(){
+            updateReadingPosition();
+            updateScrollProgress();
+        }
+        window.addEventListener('scroll',function(){
+            if(!scrollPending){
+                scrollPending=true;
+                window.requestAnimationFrame(updateScrollState);
+            }
+        },{passive:true});
+        window.addEventListener('load',updateScrollState);
+        window.addEventListener('resize',updateScrollProgress);
+        var btnTop = document.getElementById("btnTop");
+        btnTop.addEventListener("click",function(){
+            callNative("switchToMain");
+        });
+        var agreementBar = document.querySelector(".agreement-bar");
+        function syncAgreementBarHeight(){
+            document.documentElement.style.setProperty("--agreement-bar-height", agreementBar.offsetHeight + "px");
+        }
+        syncAgreementBarHeight();
+        window.addEventListener("resize", syncAgreementBarHeight);
+        if(window.ResizeObserver){
+            new ResizeObserver(syncAgreementBarHeight).observe(agreementBar);
+        }
+    </script>
+</body>
+</html>
